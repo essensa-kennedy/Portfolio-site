@@ -515,17 +515,13 @@ body ._lock {
 	transition: all 1.2s ease 0s;
 }
 
-#topLine {
-	transition: all 0.6s ease 0.4s;
+#topLine,
+#middleLine,
+#bottomLine,
+#orangeRectangle,
+#grifPencil,
+#topPencil,
+#pencil_2 {
+	transition: all 1s ease 0.4s;
 }
-
-#middleLine {
-	transition: all 0.8s ease 0.3s;
-}
-
-#bottomLine {
-	transition: all 1s ease 0.2s;
-}
-
-
 
