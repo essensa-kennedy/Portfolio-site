@@ -137,9 +137,7 @@ body ._lock {
 	z-index: 8;
  }
 
- .menu__icon {
-	
-}
+
 
 .menu__body{
 	align-self: center;
@@ -166,13 +164,24 @@ body ._lock {
  .main-screen {
 	 display: flex;
 }
+
+.main-screen__hitext{
+	font-weight: normal;
+	font-size: 18px;
+	color: #FFFFFF;
+	opacity: 0.75;
+}
+
+.main-screen__hitext span {
+color: #EC8349;
+}
+
 .main-screen__information {
 	display: flex;
 	flex-direction: column;
 }
 .main-screen__title-block {
-	margin-top: 150px;
-	display: flex;
+	margin-top: 100px;
 }
 
 .main-screen__title-block h1 {
@@ -184,10 +193,8 @@ body ._lock {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	font-weight: 500;
-	font-size: 30px;
-	line-height: 40px;
-	margin-left: 15px;
+	font-weight: normal;
+	font-size: 48px;
 }
 
 .main-screen__description {
@@ -204,9 +211,13 @@ body ._lock {
 	display: flex;
 }
 .main-btn {
+	display: inline-block;
+	transition: all 0.3s;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
 	width: 200px;
 	height: 60px;
-	background: none;
 	font-weight: normal;
 	font-size: 18px;
 	text-transform: uppercase;
@@ -217,6 +228,40 @@ body ._lock {
 	-webkit-border-image: -webkit-linear-gradient(#FA533B , #EC8349);
 	border-image-slice: 1;
 }
+
+	
+ .main-btn:after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #0C0D20;
+	z-index: -2;
+
+ }
+ .main-btn:before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0%;
+	height: 100%;
+	background-color: #FA533B;
+	transition: all 0.3s;
+	z-index: -1;
+ }
+ .main-btn:hover {
+	color: #fff;
+ }
+ .main-btn:hover:before {
+	width: 100%;
+ }
+
+
+
+
 .no-frame-btn {
 	margin-left: 20px;
 	width: 200px;
@@ -226,10 +271,12 @@ body ._lock {
 	font-size: 18px;
 	text-transform: uppercase;
 	color: #F2F8FA;
+	transition: all 0.3s;
 }
-.main-screen__author img {
 
-}
+.no-frame-btn:hover {
+	color: #eca074;
+ }
 
 .about {
 	position: relative;
@@ -304,8 +351,7 @@ body ._lock {
 .about__item:first-child{
 	padding-left: 0px;
 }
-.about__icon {
-}
+
 .about__discipline {
 	margin-top: 25px;
 	font-weight: 600;
