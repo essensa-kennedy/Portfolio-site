@@ -384,6 +384,40 @@ color: #EC8349;
 
 @media (max-width: 768px) {
 
+	.about__top {
+		margin-top: 20px;
+		display: flex;
+		flex-direction: column;
+	}
+	.about__title {
+		flex: 0 0 15%;
+		font-weight: bold;
+		font-size: 50px;
+		line-height: 66px;
+		color: #0C0D20;
+		
+	}
+	
+	.about__title span {
+		position: absolute;
+		top: 20px;
+		left: 100px;
+		color:#FA533B ;
+	}
+	
+	.about__description {
+	margin-top: 40px;
+	margin-left: 0;
+	}
+
+	.about__title-description {
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 140%;
+		color: #0C0D20;
+	
+	}
+
 	.main-screen__author img {
 		max-width: 100%;
 		
@@ -423,7 +457,7 @@ color: #EC8349;
 	}
 	
 	.main-screen__description {
-		max-width: 100%;
+		max-width: 70%;
 		margin-top: 30px;
 		font-weight: normal;
 		font-size: 16px;
@@ -600,6 +634,29 @@ color: #EC8349;
 }
 
 @media (max-width: 480px) {
+	.about__top {
+		margin-top: 0px;
+
+	}
+	.about__title {
+		font-size: 40px;
+	}
+	
+	
+	.about__title-description {
+		font-size: 20px;
+	
+	}
+	
+	.about__description {
+		font-size: 17px;
+	}
+
+	.about__subtitle {
+		margin-top: 10px;
+		font-size: 16px;
+	}
+
 
 	.main-btn {
 		width: 180px;
@@ -626,7 +683,7 @@ color: #EC8349;
 	}
 	
 	.main-screen__title-block {
-		margin-top: 100px;
+		margin-top: 80px;
 	}
 	
 	.main-screen__title-block h1 {
