@@ -1,14 +1,41 @@
+$(document).ready(function () {
+	$('.my-portfolio__slider').slick({
+		centerMode: true,
+      centerPadding: '10px',
+		arrows: false,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		autoplay: true,
+		autoplaySpeed: 2000,
+		responsive: [
+			{
+			  breakpoint: 768,
+			  settings: {
+				 centerPadding: '10px',
+				 slidesToShow: 1
+			  }
+			},
+			{
+			  breakpoint: 480,
+			  settings: {
+				 centerPadding: '10px',
+				 slidesToShow: 1
+			  }
+			}
+		 ],
+
+	});
+});
+
 const iconMenu = document.querySelector('.menu__icon')
 const body = document.querySelector('body')
 
 if (iconMenu) {
 	const bodyMenu = document.querySelector('.menu__body')
-	addEventListener('click', function (e) {
+	iconMenu.addEventListener('click', function (e) {
 		body.classList.toggle('_lock')
 		iconMenu.classList.toggle('_active')
 		bodyMenu.classList.toggle('_active')
-
-		console.log(iconMenu)
 	})
 	
 }
@@ -92,3 +119,5 @@ async function animateDesignIcon () {
 }
 
 setInterval(() => animateDesignIcon(),2700)
+
+
