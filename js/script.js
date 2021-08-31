@@ -25,9 +25,22 @@ const openTag = document.querySelector('#openTag > #Vector_2')
 const slash = document.querySelector('#slash > #Vector_3')
 const closeTag = document.querySelector('#closeTag > #Vector_4')
 
+const leftComa = document.querySelector('#Comas > #leftComa')
+const centerComa = document.querySelector('#Comas > #centerComa')
+const rightComa = document.querySelector('#Comas > #rightComa')
+const leftBracket = document.querySelector('#left > #b3')
+const rightBracket = document.querySelector('#right > #b1')
+
+
+
 
 
 async function forwardAnimate () {
+	leftBracket.setAttribute('fill', '#F7523B')
+	rightBracket.setAttribute('fill', '#F7523B')
+	leftComa.setAttribute('fill', '#0C0D20')
+	rightComa.setAttribute('fill', '#0C0D20')
+
 	bottomLine.setAttribute('d', 'M43 44H26V46H43V44Z')
 	middleLine.setAttribute('d', 'M43 38H26V40H43V38Z')
 	topLine.setAttribute('d', 'M43 32H26V34H43V32Z')
@@ -38,7 +51,8 @@ async function forwardAnimate () {
 	pencil_2.setAttribute('d', 'M71.4559 17.4655L71.2727 17.5713L49.8736 29.8039C48.9575 30.3329 48.609 31.6335 49.1379 32.5496L49.2437 32.7328C49.6669 33.4657 50.3507 33.8038 51.1507 33.7084C50.8126 34.3922 50.7634 35.1535 51.0421 35.8477L51.1479 36.0309C51.571 36.7638 52.2548 37.1019 53.0548 37.0065C52.7167 37.6903 52.5231 38.4129 52.9463 39.1458L53.0521 39.329C53.581 40.2452 54.8816 40.5937 55.7977 40.0647L77.0523 27.7934L77.2355 27.6877L71.4559 17.4655Z')
 	let a = await setTimeout(() => {
 		slash.setAttribute('fill', '#F7523B')
-	},1000)
+		centerComa.setAttribute('fill', '#F7523B')
+	},1200)
 	closeTag.setAttribute('fill', '#F7523B')
 
 }
@@ -56,6 +70,13 @@ async function reverseAnimate () {
 	
 
 		closeTag.setAttribute('fill', '#FFF')
+
+
+		centerComa.setAttribute('fill', '#FFF')
+		leftBracket.setAttribute('fill', '#FFF')
+		rightBracket.setAttribute('fill', '#FFF')
+		leftComa.setAttribute('fill', '#FFF')
+		rightComa.setAttribute('fill', '#FFF')
 	}
 	
 

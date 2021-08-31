@@ -369,6 +369,193 @@ color: #EC8349;
 	top: -60px;
 }
 
+.my-portfolio {
+}
+.my-portfolio__title {
+	flex: 0 0 20%;
+	font-weight: bold;
+	font-size: 50px;
+	line-height: 66px;
+	color: #0C0D20;
+	margin-top: 50px;
+	padding-left: 30px;
+	position: relative;
+}
+
+.my-portfolio__title span {
+	position: absolute;
+	top: 20px;
+	left: 0;
+	color:#FA533B ;
+}
+
+.my-portfolio__content {
+	display: flex;
+	flex-direction: column;
+
+}
+
+.my-portfolio__filters {
+	display: flex;
+	justify-content: flex-end;
+	font-size: 19px;
+	text-transform: uppercase;
+	color: #0C0D20;
+	display: flex;
+	margin-top: 30px;
+}
+
+.my-portfolio__filter-myrole {
+	width: 400px;
+	border: 3px solid #F2F8FA;
+	padding: 25px 0px 20px 25px;
+	margin-left: 30px;
+}
+
+.my-portfolio__filter-technologies {
+	display: flex;
+	justify-content: space-between;
+	width: 400px;
+	border: 3px solid #F2F8FA;
+	padding: 25px 0px 20px 25px;
+	margin-left: 30px;
+}
+
+.my-portfolio__filter-technologies svg {
+	margin-right: 30px;
+}
+
+
+.my-portfolio__items {
+}
+
+.my-portfolio__title-block {
+	width: 100%;
+	padding: 42px 20px 42px 0px;
+	display: flex;
+	align-items: center;
+}
+
+.my-portfolio__icon-up-down {
+	flex: 0 0 5%;
+	padding: 0px 35px;
+
+}
+
+.my-portfolio__title-project{
+	flex: 0 0 20%;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 140%;
+	color: #0C0D20;
+
+}
+
+
+
+
+.my-portfolio__myrole {
+	flex: 0 0 30%;
+	margin-left: 35px;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 140%;
+	color: #585972;
+}
+
+.my-portfolio__tags {
+	margin-left: 35px;
+	flex: 0 0 30%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.my-portfolio__tag {
+	font-weight: normal;
+	padding: 7px 12px;
+	align-self: flex-start;
+	font-size: 16px;
+	line-height: 130%;
+	color: #0C0D20;
+	border: rgba(205, 219, 226, 1) solid 1px;
+	border-radius: 6px;
+	margin-left: 10px;
+	margin-bottom: 8px;
+}
+
+.title-block--active {
+	background-color: #F7523B;
+}
+
+.title-project--active {
+	color: #fff;
+}
+
+.myrole--active {
+	color: #FCF4F3;
+}
+
+.tag--active {
+	color: #F6523B;
+	border: rgba(205, 219, 226, 1) solid 1px;
+	background-color: #FCF4F3;
+}
+
+.icon-up-down--active{
+}
+
+.description-block--active{
+	width: 100%;
+	height: 100%;
+	background-color: #FCF4F3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.my-portfolio__description-block {
+}
+
+.my-portfolio__task {
+}
+
+.my-portfolio__task-title {
+}
+
+.my-portfolio__task-description {
+}
+
+.my-portfolio__myrole-title {
+}
+
+.my-portfolio__myrole-description {
+}
+
+.my-portfolio__seemore-block {
+}
+
+.seemore__block-link {
+}
+
+.my-portfolio__slider-block {
+}
+
+
+
 
 @media (max-width: 1000px) {
 	.main-screen__author img {
@@ -775,4 +962,8 @@ color: #EC8349;
 
 .icon__design g path {
 	transition: all 0.8s ease-out;
+}
+
+.icon__vue g path {
+	transition: all 1s ease-out;
 }
