@@ -430,6 +430,14 @@ color: #EC8349;
 .my-portfolio__items{
 }
 
+.my-portfolio__item {
+	transition: all 0.3s ease;
+}
+
+.my-portfolio__item._active{
+	transform: translateX(20px);
+}
+
 .my-portfolio__title-block {
 	margin-top: 10px;
 	width: 100%;
@@ -634,7 +642,6 @@ color: #eca074;
 	transform: scale(1.0);
 	opacity: 1;
 }
-
 
 
 .my-portfolio__slider img {
