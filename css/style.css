@@ -1049,13 +1049,22 @@ margin: 0;
 	height: 60px;
 	/* filter: drop-shadow(7px -1px 18px rgba(27, 62, 78, 0.)); */
 	background: #fff;
-	border: 2px solid #F2F8FA;
+	border: 2px solid #d1d2db;
 	font-weight: normal;
 	font-size: 18px;
 	text-transform: uppercase;
 	color: #585972;
 	opacity: 0.7;
 	transition: all 0.3s ease;
+}
+
+.button-white::before{
+	content: '';
+	display: inline-block;
+	background: url("../img/icons/down.svg") -3px 5px;
+	background-repeat: no-repeat;
+	height: 24px;
+	width: 24px;
 }
 
 .button-white:hover {
