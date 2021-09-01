@@ -59,9 +59,6 @@ const leftBracket = document.querySelector('#left > #b3')
 const rightBracket = document.querySelector('#right > #b1')
 
 
-
-
-
 async function forwardAnimate () {
 	leftBracket.setAttribute('fill', '#F7523B')
 	rightBracket.setAttribute('fill', '#F7523B')
