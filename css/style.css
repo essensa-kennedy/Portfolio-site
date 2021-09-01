@@ -321,7 +321,7 @@ color: #EC8349;
 .about__skills {
 	position: relative;
 	margin-top: 70px;
-	padding: 70px 70px;
+	padding: 70px 70px 100px 70px;
 	background: #F2F8FA;
 	display: flex;
 	justify-content: space-between;
@@ -372,6 +372,7 @@ color: #EC8349;
 
 
 @media (max-width: 1000px) {
+
 	.main-screen__author img {
 		height: 100%;
 		width: auto;
@@ -379,13 +380,12 @@ color: #EC8349;
 
 	.about__skills {
 		padding: 70px 70px;}
-
 }
 
 @media (max-width: 768px) {
 
 	.about__top {
-		margin-top: 20px;
+		margin-top: 40px;
 		display: flex;
 		flex-direction: column;
 	}
@@ -768,14 +768,14 @@ color: #EC8349;
 }
 
 .my-portfolio__wrapper {
-	margin-top: 100px;
+	margin-top: 80px;
 }
 
 .my-portfolio__title {
 	flex: 0 0 15%;
 	font-weight: bold;
 	font-size: 50px;
-	line-height: 66px;
+	line-height: 140%;
 	color: #0C0D20;
 	position: relative;
 }
@@ -788,7 +788,7 @@ color: #EC8349;
 }
 
 .my-portfolio__projects {
-	margin-top: 120px;
+	margin-top: 100px;
 }
 
 .my-portfolio__project {
@@ -814,7 +814,7 @@ color: #EC8349;
 .project__left-side--blue::after{
 	left:-20%;
 	top:-7%;
-	border: #F2F8FA 100px solid;
+	border: #F2F8FA 90px solid;
 	
 }
 
@@ -830,7 +830,7 @@ color: #EC8349;
 	background: linear-gradient(90deg, #F2F8FA 0%, rgba(242, 248, 250, 0) 90.72%);
 }
 
-.project__slider--blue {
+.slider--blue {
 	margin-left: -70px;
 }
 
@@ -843,7 +843,7 @@ color: #EC8349;
 .project__left-side--orange::after{
 	right:-26%;
 	top:-7%;
-	border: #FCF4F3 100px solid;
+	border: #FCF4F3 90px solid;
 }
 
 .project__right-side--orange {
@@ -858,7 +858,7 @@ color: #EC8349;
 	background: linear-gradient(270deg, #FCF4F3 1.61%, rgba(252, 244, 243, 0) 90.8%);
 }
 
-.project__slider--orange {
+.slider--orange {
 margin: 0;
 }
 
@@ -876,9 +876,14 @@ margin: 0;
 
 /* differences */
 
+/* .project__picture {
+	z-index: 10;
+} */
+
 .project__left-side {
 	position: relative;
-	z-index: 2;
+	z-index: 3;
+	flex-wrap: wrap;
 }
 
 .project__left-side::after {
@@ -912,10 +917,11 @@ margin: 0;
 }
 
 .project__slider {
-	overflow: visible;
 	position: relative;
 	z-index: 5;
-	margin-top: 30px;
+}
+
+.project__slider img {
 }
 
 .project__button-area {
@@ -996,7 +1002,6 @@ margin: 0;
 .project__right-side {
 	position: relative;
 	z-index: 2;
-	/* align-self:flex-start; */
 }
 
 .project__right-side::after{
@@ -1035,6 +1040,83 @@ margin: 0;
 .project__text span {
 	color: #F7523B;
 }
+
+/* Адаптив для блока PORTFOLIO */
+
+@media (max-width: 1000px) {
+
+	.project {
+		flex-direction: column;
+		align-items: center;
+	}
+
+
+	/* .subtitle--first {
+		margin-left: 70px;
+	} */
+	
+	.project__main-title {
+		margin-left: 70px;
+	}
+
+	.project__left-side--blue::after{
+		left: -20%;
+		top:-7%;
+	}
+
+	.project__right-side {
+		margin-top: 40px;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+
+	.project__button-area {
+		display: flex;
+		justify-content: center;
+		order: 4;
+		margin-left: 0px;
+	}
+
+	.project__description {
+		margin-top: 0px;
+		padding: 20px 20px;
+		flex: 1 1 30%;
+		margin-left: 30px;
+	}
+
+	/* Синий проект */
+
+	.project__right-side--blue {
+	margin-left: 0;
+	}
+
+	.project__subtitle--blue {
+	margin-left: 70px;
+	}
+
+	.slider--blue {
+		margin-left: 0px;
+	}
+
+	/* Оранжевый проект */
+
+.project__right-side--orange {
+	order: 2;
+	}
+
+.project__left-side--orange {
+	order: 2;
+	}
+
+.project__left-side--orange::after {
+	right: -20%;
+   top: -7%;
+	}
+
+
+	}
+
 
 
 
