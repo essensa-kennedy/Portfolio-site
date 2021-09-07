@@ -121,6 +121,7 @@ body ._lock {
 	background-color: #fff;
 	position: absolute;
 	transform: skewY(-1deg) scale(6);
+	z-index: 7;
  }
  
  .header {
@@ -164,7 +165,24 @@ body ._lock {
  
  .main-screen {
 	 display: flex;
+	 position: relative;
 }
+.main-screen__social-block {
+	position: absolute;
+	top: 90px;
+   left: -200px;
+}
+
+.main-screen__icon {
+	cursor: pointer;
+	opacity: 20%;
+	transition: all 0.3s;
+}
+
+.main-screen__icon:hover {
+	opacity: 1;
+}
+
 
 .main-screen__hitext{
 	font-weight: normal;
