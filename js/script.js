@@ -118,3 +118,42 @@ async function animateDesignIcon () {
 setInterval(() => animateDesignIcon(),2700)
 
 
+// window.onscroll = function() {
+// 	checkMarginToTop();
+// };
+
+// var nav = document.querySelector(".header__row");
+
+// var sticky = nav.offsetTop;
+
+// function checkMarginToTop() {
+// 		 if (window.pageYOffset > sticky) {
+// 		 nav.classList.add("sticky");
+// 	} else {
+// 		 nav.classList.remove("sticky");
+// 	}
+// }
+
+$(function () {
+
+	$(window).scroll(function () {
+
+		if ($(this).scrollTop() != 0) {
+
+			$('#toTop').fadeIn();
+
+		} else {
+
+			$('#toTop').fadeOut();
+
+		}
+
+	});
+
+	$('#toTop').click(function () {
+
+		$('body,html').animate({ scrollTop: 0 }, 800);
+
+	});
+
+});

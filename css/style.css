@@ -108,7 +108,6 @@ body ._lock {
 	perspective: 400px;
 	position: relative;
 	background: linear-gradient(100deg, #0C0D20 49.9%, #F7523B 50%, #EC8349 111.13%);
-	/* transform: skew(-2deg) scale3d(1.5, 1.5, 1.5); */
  }
 
  .background-fill::before {
@@ -124,10 +123,32 @@ body ._lock {
 	z-index: 7;
  }
  
- .header {
-	 margin-top: 50px;
+.toTop {
+	background: rgb(255, 255, 255) url("../img/icons/arrow-down.svg") center center no-repeat;
+	/* transform: rotate(180deg); */
+	width: 80px;
+	height: 80px;
+	position: fixed;
+	bottom: 150px;
+	right: 100px;
+	border-radius: 50px;
+	border: #dee6e7 10px solid;
+	opacity: 30%;
+	z-index: 10;
+	display: none;
+	transition: all 0.3s ease 0s;
+ }
+ 
+ .toTop:hover {
+	opacity: 80%;
+	transform: scale(1.1);
+	transform: translateY(10px);
  }
 
+
+ .header {
+	 margin-top: 50px;	
+ }
 
  .header__row {
 	 display: flex;
@@ -174,9 +195,39 @@ body ._lock {
 }
 
 .main-screen__icon {
+	position: relative;
 	cursor: pointer;
 	opacity: 20%;
 	transition: all 0.3s;
+}
+
+.main-screen__icon::before {
+	content: '';
+	position: absolute;
+	width: 0%;
+	height: 2px;
+	background: linear-gradient(87.3deg, #FA533B -29.45%, #EB5944 15.74%, #EC8349 111.13%);
+	bottom: 0;
+	visibility: hidden;
+	transition: all 0.3s ease;
+}
+
+.main-screen__icon:hover::before {
+	animation: animation__line;
+	animation-duration: 0.7s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes animation__line {
+	0% {
+		width: 0%;
+	}
+
+	
+	100% {
+		width: 100%;
+		visibility: visible;
+	}
 }
 
 .main-screen__icon:hover {
