@@ -79,13 +79,16 @@ body {
 	font-family: "Exo", sans-serif;
 	font-weight: normal;
 	font-size: 18px;
-  	color: #fff;
+	color: #fff;
 }
 
 body ._lock {
 	overflow: hidden;
 }
 /*--------------------*/
+
+
+/* Основные обертки*/
 
 .wrapper {
 	min-height: 100%;
@@ -104,11 +107,16 @@ body ._lock {
 	margin: 0px auto;
 }
 
-.background-fill {
+/*--------------------*/
+
+
+/* секция HEADER */
+
+.background-fill { 
 	perspective: 400px;
 	position: relative;
 	background: linear-gradient(100deg, #0C0D20 49.9%, #F7523B 50%, #EC8349 111.13%);
-}
+	}
 
 .background-fill::before {
 	display: block;
@@ -123,45 +131,23 @@ body ._lock {
 	z-index: 7;
 }
 
-.toTop {
-	background: rgb(255, 255, 255) url("../img/icons/arrow-down.svg") center center no-repeat;
-	/* transform: rotate(180deg); */
-	width: 80px;
-	height: 80px;
-	cursor: pointer;
-	position: fixed;
-	bottom: 150px;
-	right: 100px;
-	border-radius: 50px;
-	border: #f8f3f0 10px solid;
-	opacity: 30%;
-	z-index: 30;
-	display: none;
-	transition: all 0.3s ease 0s;
-}
-
-.toTop:hover {
-	opacity: 80%;
-	transform: scale(1.1);
-	transform: translateY(10px);
-}
-
-
 .header {
 	margin-top: 50px;	
 }
 
- .header__row {
-	 display: flex;
-	 justify-content: space-between;
-	 align-content: center;
- }
+.header__row {
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+}
 
- .header__logo {
+.header__logo {
 	z-index: 8;
- }
+}
 
-
+.header__menu {
+margin-top: 10px;
+}
 
 .menu__body{
 	align-self: center;
@@ -171,23 +157,29 @@ body ._lock {
 	display: flex;
 }
 
- .menu__links a {
-	 padding: 5px;
-	 cursor: pointer;
+.menu__links a {
+	padding: 5px;
+	cursor: pointer;
 	font-weight: 500;
 	font-size: 18px;
 	color: #F2F8FA;
 	margin-left: 50px;
 	transition: all 0.3s ease 0s;
- }
-
- .menu__links a:hover{
-	color:#0C0D20;
- }
- 
- .main-screen {
-	 
 }
+
+.menu__links a:hover{
+	color:#0C0D20;
+}
+
+.menu__links-social {
+	visibility: hidden;
+}
+
+/*--------------------*/
+
+
+/* секция MAINSCREEN */
+
 .main-screen__social-block {
 	position: absolute;
 	top: 20%;
@@ -240,7 +232,6 @@ opacity: 0;
 		width: 0%;
 	}
 
-	
 	100% {
 		width: 100%;
 		visibility: visible;
@@ -250,7 +241,6 @@ opacity: 0;
 .main-screen__icon:hover {
 	opacity: 1;
 }
-
 
 .main-screen__hitext{
 	font-weight: normal;
@@ -330,7 +320,7 @@ position: relative;
 }
 
 	
- .main-btn:after {
+.main-btn:after {
 	content: "";
 	position: absolute;
 	bottom: 0;
@@ -339,9 +329,9 @@ position: relative;
 	height: 100%;
 	background-color: #0C0D20;
 	z-index: -2;
+}
 
- }
- .main-btn:before {
+.main-btn:before {
 	content: "";
 	position: absolute;
 	bottom: 0;
@@ -351,13 +341,15 @@ position: relative;
 	background-color: #FA533B;
 	transition: all 0.3s;
 	z-index: -1;
- }
- .main-btn:hover {
+}
+
+.main-btn:hover {
 	color: #fff;
- }
- .main-btn:hover:before {
+}
+
+.main-btn:hover:before {
 	width: 100%;
- }
+}
 
 .no-frame-btn {
 	margin-left: 20px;
@@ -373,7 +365,37 @@ position: relative;
 
 .no-frame-btn:hover {
 	color: #eca074;
- }
+}
+
+/*--------------------*/
+
+.toTop {
+	background: rgb(255, 255, 255) url("../img/icons/arrow-down.svg") center center no-repeat;
+	/* transform: rotate(180deg); */
+	width: 80px;
+	height: 80px;
+	cursor: pointer;
+	position: fixed;
+	bottom: 150px;
+	right: 100px;
+	border-radius: 50px;
+	border: #f8f3f0 10px solid;
+	opacity: 30%;
+	z-index: 30;
+	display: none;
+	transition: all 0.3s ease 0s;
+}
+
+.toTop:hover {
+	opacity: 80%;
+	transform: scale(1.1);
+	transform: translateY(10px);
+}
+
+
+
+
+
 
 .about {
 	z-index: 15;
@@ -761,6 +783,8 @@ position: relative;
 		margin-top: 50px;
 		border-top: 4px #eb523a solid;
 		align-self: center;
+		visibility: visible;
+		 
 	 }
 
 	 .menu__links-social svg {
