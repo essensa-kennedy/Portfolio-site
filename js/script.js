@@ -1,32 +1,3 @@
-$(document).ready(function () {
-	$('.my-portfolio__slider').slick({
-		centerMode: true,
-      centerPadding: '10px',
-		arrows: false,
-		slidesToShow: 3,
-		slidesToScroll: 1,
-		autoplay: true,
-		autoplaySpeed: 2000,
-		responsive: [
-			{
-			  breakpoint: 768,
-			  settings: {
-				 centerPadding: '10px',
-				 slidesToShow: 1
-			  }
-			},
-			{
-			  breakpoint: 480,
-			  settings: {
-				 centerPadding: '10px',
-				 slidesToShow: 1
-			  }
-			}
-		 ],
-
-	});
-});
-
 const iconMenu = document.querySelector('.menu__icon')
 const body = document.querySelector('body')
 
@@ -117,28 +88,11 @@ async function animateDesignIcon () {
 
 setInterval(() => animateDesignIcon(),2700)
 
-
-// window.onscroll = function() {
-// 	checkMarginToTop();
-// };
-
-// var nav = document.querySelector(".header__row");
-
-// var sticky = nav.offsetTop;
-
-// function checkMarginToTop() {
-// 		 if (window.pageYOffset > sticky) {
-// 		 nav.classList.add("sticky");
-// 	} else {
-// 		 nav.classList.remove("sticky");
-// 	}
-// }
-
 $(function () {
 
 	$(window).scroll(function () {
 
-		if ($(this).scrollTop() != 0) {
+		if ($(this).scrollTop() >= 800) {
 
 			$('#toTop').fadeIn();
 
@@ -157,3 +111,29 @@ $(function () {
 	});
 
 });
+
+const moreButton = document.querySelector('#more-btn')
+let isOpened = false
+
+moreButton.addEventListener('click', () => {
+	if (!isOpened) {
+		isOpened = true
+		const arrayOfProjects = document.querySelectorAll('.extra')
+		console.log(arrayOfProjects)
+		for (item of arrayOfProjects) {
+		item.classList.remove('_invisible')
+		moreButton.classList.add('_up')
+		moreButton.innerHTML = 'HIDE'
+		}
+	} else {
+		isOpened = false
+		const arrayOfProjects = document.querySelectorAll('.extra')
+		console.log(arrayOfProjects)
+		for (item of arrayOfProjects) {
+		item.classList.add('_invisible')
+		moreButton.classList.remove('_up')
+		moreButton.innerHTML = 'SHOW MORE (6 PROJECTS)'
+		}
+	}
+})
+
