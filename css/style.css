@@ -810,6 +810,14 @@ justify-content: space-between;
 	.about__title span {
 		font-size: 40px;
 	}
+
+	.about__discipline {
+		font-size: 22px;
+	}
+
+	.about__text {
+		margin-top: 5px;
+	}
 }
 
 /*--------------------*/
