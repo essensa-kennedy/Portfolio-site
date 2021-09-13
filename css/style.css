@@ -1157,8 +1157,8 @@ justify-content: space-between;
 .background__fill--orange::before {
 	content: '';
 	width: 100%;
-	height: 10%;
-	top: -35px;
+	height: 15%;
+	top: -68px;
 	right: 0;
 	background-color: #fff;
 	position: absolute;
@@ -1386,6 +1386,12 @@ line-height: 300%;
 @media (max-width: 768px) {
 	.getintouch__form {
 		padding: 42px 30px 65px 30px;
+	}
+}
+
+@media (max-width: 608px) {
+	.background__fill--orange::before {
+		height: 10%;
 	}
 }
 
