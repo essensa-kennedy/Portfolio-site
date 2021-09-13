@@ -848,6 +848,7 @@ justify-content: space-between;
 .my-portfolio__projects {
 	margin-top: 100px;
 }
+
 .my-portfolio__project {
 	margin-top: 150px;
 }
@@ -1091,6 +1092,8 @@ justify-content: space-between;
 }
 
 @media (max-width: 480px) {
+	
+
 	.project__details {
 		margin-top: 40px;
 	}
@@ -1120,7 +1123,11 @@ justify-content: space-between;
 	}
 
 	.my-portfolio__projects {
-		margin-top: 40px;
+		margin-top: 80px;
+	}
+
+	.my-portfolio__project {
+		margin-top: 80px;
 	}
 
 	.project__main-title {
@@ -1376,11 +1383,26 @@ line-height: 300%;
 	
 }
 
+@media (max-width: 768px) {
+	.getintouch__form {
+		padding: 42px 30px 65px 30px;
+	}
+}
+
 @media (max-width: 480px) {
+
+	.background__fill--orange::before {
+		height: 7%;
+		top: -26px;
+	}
 
 	.getintouch__title,
 	.getintouch__title span {
 		font-size: 40px;
+	}
+
+	.getintouch__form {
+		padding: 30px 20px 35px 20px;
 	}
 	
 	.getintouch__logo {
@@ -1397,12 +1419,19 @@ line-height: 300%;
 		font-size: 16px;
 	}
 	.getintouch__content {
-		margin-top: 80px;
+		margin-top: 40px;
 	}
 
 	.button-filled--form {
 		width: 100%;
 		font-size: 16px;
+	}
+	.footer__content {
+		flex-direction: column;
+	}
+
+	.footer__text-persdata {
+		margin-top: 10px;
 	}
 
 }
